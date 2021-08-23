@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDRjKPf5ockfzqqwf0mlJR4-TeEpNKJuJ4",
+    authDomain: "foodie-point-15h.firebaseapp.com",
+    projectId: "foodie-point-15h",
+    storageBucket: "foodie-point-15h.appspot.com",
+    messagingSenderId: "176368324489",
+    appId: "1:176368324489:web:8482169e4237d896085b58",
+    measurementId: "G-3JB8WX7J8R"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="LoginForm.css">
+    <link rel="stylesheet" href="dom.css">
+
+    <title> AdminPanel !</title>
+  </head>
+  <body  onclick="authCheck()">
+    <h1>Admin Panel !</h1>
+    <h2>Add Dishes</h2>
+    
+    <button class="SignOutBtn" onclick="SignOut()" >LogOut</button>
+    <div class="Pdiv" >
+      <input id="DishImage" type="file"><br><br>
+      <input id="DishName" type="text" placeholder="Dish Name"><br><br> 
+      <input id="DishDesc" type="text" placeholder="Dish Description"><br><br>
+      <input id="Dishprice" type="text" placeholder="Price Per Serving"><br><br>
+      <div><select name="cars" id="cars"><br>
+        <option value="BBQ">BBQ</option>
+        <option value="FAST FOOD">FAST FOOD</option>
+        <option value="DESI FOOD">DESI FOOD</option>
+        <option value="ITALIAN">ITALIAN</option>
+      </select></div>
+      <button onclick="getimage()" > Save Product</button>
+    </div>
+
+    <hr><hr><hr>
+    <div class="card" id="card">
+
+    </div>
+
+    <script src="app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
